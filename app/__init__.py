@@ -1,8 +1,8 @@
 from flask import Flask, render_template
-from flask.ext.bootstrap import Bootstrap
-from flask.ext.mail import Mail
-from flask.ext.moment import Moment
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask_bootstrap import Bootstrap #usamos flask_bootstrap
+from flask_mail import Mail
+from flask_moment import Moment
+from flask_sqlalchemy import SQLAlchemy
 from config import config
 bootstrap = Bootstrap()
 mail = Mail()
@@ -18,3 +18,4 @@ def create_app(config_name):
     db.init_app(app)
     # attach routes and custom error pages here
     return app
+#algunos comandos del libro estan desfazados
